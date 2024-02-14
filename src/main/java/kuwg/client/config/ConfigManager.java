@@ -104,5 +104,9 @@ public class ConfigManager {
         this.alertStaffPreKickMod = config.getBoolean("alert-staff-banned-mod", true);
         this.alertBannedClientPreKickMessage = config.getString("alert-banned-client-message", "§cPlayer §e%player%§c joined with a forbidden client: §b%client%§c.");
         this.alertBannedModPreKickMessage = config.getString("alert-banned-mod-message", "§cPlayer §e%player%§c joined with a forbidden mod: §b%mod%§c.");
+
+        // Setting lists to lower case
+        bannedClients.replaceAll(String::toLowerCase);
+        bannedMods.replaceAll(String::toLowerCase);
     }
 }

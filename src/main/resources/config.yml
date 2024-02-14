@@ -74,10 +74,9 @@ undefined-client: "undefined"
 kick-banned-client: true
 
 # The clients that are not allowed on the server. Doesn't work if "kick-banned-client" is not set to true.
-# NOTE: all the clients MUST have lower case characters, else they won't work.
 banned-clients:
-  - "notallowedclient1"
-  - "notallowedclient2"
+  - "NotAllowedClient1"
+  - "NotAllowedClient2"
 
 # Message that the client will receive when they join with a banned client.
 kick-banned-client-message: "§4You have been kicked for having a forbidden client."
@@ -104,7 +103,6 @@ alert-banned-client-message: "§cPlayer §e%player%§c joined with a forbidden c
 kick-banned-mod: true
 
 # The mods that are banned on the server.
-# NOTE: all the mods MUST have lower case characters, else they won't work.
 banned-mods:
   - "NotAllowedForgeMod1"
   - "NotAllowedForgeMod2"
