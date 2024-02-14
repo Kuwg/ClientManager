@@ -1,4 +1,4 @@
-package kuwg.client;
+package kuwg.client.mod;
 
 public class ForgeMod {
     private final String name, version;

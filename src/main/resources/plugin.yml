@@ -4,3 +4,7 @@ main: kuwg.client.ClientManager
 load: STARTUP
 authors: [Kuwg]
 description: Manages clients and forge mods for you!
+commands:
+  clientmanager:
+    description: "Main command, use /cm <client|mods|reload|help>."
+    aliases: ["cm", "cmanager"]

@@ -1,0 +1,130 @@
+# Plugin configuration file. Edit this, save and then use "/clientmanager reload" if the command is allowed,
+#   else reload the server to apply changes.
+
+# Whether enabling commands (/cmanager client <player>, /cmanager mods <player>, /cmanager reload).
+commands:
+
+  # This is the permission for just for "/cmanager" or "/cmanager help".
+  default-permission: "cmanager.command.default"
+
+  # The message that will be sent to players executing any of those commands without the right permission.
+  no-permission-message: "§4You cannot execute this command!"
+
+  general-command-enabled: true
+
+  # The message that players with the right permission will receive if the command is not enabled.
+  command-not-enabled-message: "§4This command is currently disabled!"
+
+  # If the "/cmanager client <player>" command should be enabled!
+  enable-client-command: true
+
+  # Permission needed to execute the command.
+  client-command-permission: "cmanager.command.client"
+
+  # If the "/cmanager mods <player>" command should be enabled!
+  enable-mods-command: true
+
+  # Permission needed to execute the command.
+  mods-command-permission: "cmanager.command.mods"
+
+  # If the "/cmanager reload" command should be enabled!
+  enable-reload-command: true
+
+  # Permission needed to execute the command.
+  reload-command-permission: "cmanager.command.reload"
+
+# All the settings about broadcast on player join.
+broadcast-on-join:
+
+  # If the plugin needs to remove the default "Player joined the game" message for staffs.
+  remove-default-join-message: true
+
+  # Whether to broadcast the joined player's client.
+  broadcast-client: true
+
+  # Whether to broadcast the joined player's mods (if found).
+  broadcast-mods: false
+
+  # The permission needed to receive alerts on player join.
+  permission: "cmanager.join"
+
+  # The message to be sent to online staff, %player% is the one who joined, and %client% is his client!
+  client-join-message: "§e%player% has joined with §b§l%client%§r§e."
+
+  # The main message that will be sent to online staff.
+  mods-join-message-main: "§aLoaded Mods: "
+
+  # This message will get repeated for every mod the player has.
+  mods-join-message-mod: "    §4- §dMod: \"§b%mod_name%§d\" Version: \"§b%mod_version%§d\"."
+
+  # If the plugin needs to behave asynchronously (on a separate thread for performance reasons) or not.
+  async: true
+
+  # Whether to alert for strange client brands.
+  alert-strange-client-brand: true
+
+  # This will be sent to online staff when a player sends his mods but doesn't have "fml,forge" as a client brand,
+  #   and this means he probably modified his client brand.
+  strange-client-brand-message: "§cPlayer §e%player%§c might have altered their client brand. Client: §b%client%§c, expected forge."
+
+# What the client will be if nothing is found.
+undefined-client: "undefined"
+
+# If the plugin should kick players joining with banned clients.
+kick-banned-client: true
+
+# The clients that are not allowed on the server. Doesn't work if "kick-banned-client" is not set to true.
+# NOTE: all the clients MUST have lower case characters, else they won't work.
+banned-clients:
+  - "notallowedclient1"
+  - "notallowedclient2"
+
+# Message that the client will receive when they join with a banned client.
+kick-banned-client-message: "§4You have been kicked for having a forbidden client."
+
+# Whether to allow players with permission "banned-client-bypass-permission" to bypass the banned client.
+staff-bypass-client-ban: true
+
+# The permission staff need to bypass client banning.
+banned-client-bypass-permission: "cmanager.bypass.client"
+
+# Whether to alert staff when a player gets kicked for having a banned client.
+alert-staff-on-client-kick: true
+
+# What staff will receive when a player gets kicked for having a banned client.
+kick-banned-client-staff-message: "§cPlayer §e%player%§c was kicked for having a forbidden client: §b%client%§c."
+
+# Whether staff should be alerted when a player joins with a banned mod.
+alert-staff-banned-mod: true
+
+# The message staff will receive when a player joins the server with a banned client.
+alert-banned-client-message: "§cPlayer §e%player%§c joined with a forbidden client: §b%client%§c."
+
+# Whether the plugin should kick players with banned mods.
+kick-banned-mod: true
+
+# The mods that are banned on the server.
+# NOTE: all the mods MUST have lower case characters, else they won't work.
+banned-mods:
+  - "NotAllowedForgeMod1"
+  - "NotAllowedForgeMod2"
+  - "NotAllowedForgeMod3"
+  - "NotAllowedForgeMod4"
+
+# Message that the client will receive when they join with a banned mod.
+kick-banned-mod-message: "§4The forbidden mod %mod% has been detected on your device."
+
+# Whether to alert staff when a player gets kicked for having a banned mod.
+alert-staff-on-mod-kick: true
+
+# Whether to allow players with permission "banned-mod-bypass-permission" to bypass the banned mods.
+staff-bypass-mod-ban: true
+
+# The permission staff need to bypass mod banning.
+banned-mod-bypass-permission: "cmanager.bypass.mod"
+
+# What staff will receive when a player gets kicked for having a banned mod.
+kick-banned-mod-staff-message: "§cPlayer §e%player%§c was kicked for harboring a forbidden mod: §b%mod%§c."
+
+# The message staff will receive when a player joins the server with a banned mod.
+alert-banned-mod-message: "§cPlayer §e%player%§c joined with a forbidden mod: §b%mod%§c."
