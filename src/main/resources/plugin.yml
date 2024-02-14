@@ -1,0 +1,6 @@
+name: ClientManager
+version: '${project.version}'
+main: kuwg.client.ClientManager
+load: STARTUP
+authors: [Kuwg]
+description: Manages clients and forge mods for you!
